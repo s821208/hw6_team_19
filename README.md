@@ -3,7 +3,6 @@ ISA525700 Computer Vision for Visual Effects<br/>Assignment 6: Match Moving SLAM
 ===
 
 
-
 # Abstract
 本研究探討SLAM (Simultaneous localization and mapping)方法產生相似於AR或MR影片的視覺效果，，輔以後製軟體產成成果進行視覺效果比較。
 
@@ -16,7 +15,6 @@ Keyword: SLAM,視覺效果
 3. [Result](#Result) 
 4. [Conclusion](#Conclusion)
 5. [Reference](#Reference)
-
 
 
 # Introduction
@@ -38,19 +36,24 @@ SLAM是軟體機器人，可自動同步執行在map上建立object，而object�
 因製作視覺效果考量下，我們以旋轉攝影與坐姿動作自攝影片。
 
 ## Original film
+
 這是在NTHU圖書館拍攝實驗一的原始影片。
+
 [![](http://img.youtube.com/vi/tgXU5NZu7Ak/0.jpg)](http://www.youtube.com/watch?v=tgXU5NZu7Ak "")
 
 這是在實驗室所自己拍攝實驗二影片。
+
 [![](http://img.youtube.com/vi/xSsBWGHv6ls/0.jpg)](http://www.youtube.com/watch?v=xSsBWGHv6ls "")
 
 
 ## Generate the Simultaneous localization and mapping of 3D visual effects
 
 在第一組實驗中，插入2D image與3D image，在Rotating與zooming in or out微調下，產生match moving technique視覺效果。
+
 [![](http://img.youtube.com/vi/xC0J4mSv2Ug/0.jpg)](http://www.youtube.com/watch?v=xC0J4mSv2Ug "")
 
 在第二組實驗中，插入3D model，用Rotating與zooming in or out微調下，產生match moving technique視覺效果。
+
 [![](http://img.youtube.com/vi/Wy0xvm-Zk7U/0.jpg)](http://www.youtube.com/watch?v=Wy0xvm-Zk7U "")
 
 ## Show film alignment results between different films
