@@ -32,6 +32,8 @@ SLAM是軟體機器人，可自動同步執行在map上建立object，而object�
 - 已在Ubuntu 12.04,14.04和16.04兩種版本測試後，確定為容易編譯、高效能與更佳穩定。
 - 可以平行執行影像追蹤、區域定位、關閉循環等3個執行緒。
 
+ORB-SLAM是Raul Mur-Artal, J. M. M. Montiel和Juan D. Tardos於2015共同發表在IEEE Transactions on Robotics。ORB-SLAM是基於Real-Time單眼，大小規模與室內外均可適用，對於劇烈運動也具有絕佳效果。支援閉環檢測與重新定位，包含全自動初始化。該系統含蓋SLAM所有模組，如跟蹤（Tracking）、建圖（Mapping）、重定位（Relocalization）、閉環檢測（Loop closing）。由於ORB-SLAM系統是基於feature mapping，能即是計算出相機移動軌跡Moving track，創造重建3D Scenes，ORB-SLAM2係在ORB-SLAM的基礎上，且支持標註定位後的雙眼相機和RGB-D相機。
+
 # Result
 因製作視覺效果考量下，我們以旋轉攝影與坐姿動作自攝影片。
 
