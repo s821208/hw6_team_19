@@ -11,11 +11,11 @@ Keyword: SLAM,視覺效果
 
 
 # Table of Contents
-[Introduction](#Introduction)
-[Method](#Method)
-[Result](#Result) 
-[Conclusion](#Conclusion)
-[Reference](#Reference)
+1. [Introduction](#Introduction)
+2. [Method](#Method)
+3. [Result](#Result) 
+4. [Conclusion](#Conclusion)
+5. [Reference](#Reference)
 
 
 
