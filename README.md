@@ -1,7 +1,6 @@
 # hw6_team_19
-ISA525700 Computer Vision for Visual Effects
-Assignment 6:Match Moving SLAM
-Team 19
+ISA525700 Computer Vision for Visual Effects<br/>Assignment 6: Match Moving SLAM<br/>
+===
 
 
 
