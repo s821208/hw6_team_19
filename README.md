@@ -73,7 +73,7 @@ ORB-SLAM2有以下特點
 [![](http://img.youtube.com/vi/Wy0xvm-Zk7U/0.jpg)](http://www.youtube.com/watch?v=Wy0xvm-Zk7U "")
 
 ## Compare above methods
- 在實驗一與實驗二比較後，Virtual object貼近真實object有最AR與MR視覺效果。
+ 在實驗一與實驗二比較後，取得feature與Trajectory，讓Virtual object貼近真實object有最AR與MR視覺效果。
 
 
 # Conclusion
