@@ -28,13 +28,13 @@ Keyword: ORB-SLAM2, Tracking, Mapping, Relocalization, Loop closing
 
 ORB-SLAM是Raul Mur-Artal, J. M. M. Montiel和Juan D. Tardos於2015共同發表在IEEE Transactions on Robotics。ORB-SLAM是基於Real-Time單眼，大小規模與室內外均可適用，對於劇烈運動也具有絕佳效果。支援閉環檢測與重新定位，包含全自動初始化。該系統含蓋SLAM所有模組，如跟蹤（Tracking）、建圖（Mapping）、重定位（Relocalization）、閉環檢測（Loop closing）。由於ORB-SLAM系統是基於feature mapping，能即是計算出相機移動軌跡Moving track，創造重建3D Scenes，ORB-SLAM2係在ORB-SLAM的基礎上，且支持標註定位後的雙眼相機和RGB-D相機。  
 
--	Tracking 
+- Tracking 
 主要工作為從根據上一frame計算，影像提取ORB feature，或進行全域重新初始化定位，然後追蹤已重建局部地圖，優化定位值，最後依據一些規則，確定新的key frame.   
 
--	Local Mapping 
+- Local Mapping 
 這一部分主要完成局部地圖建構。包括對key frame的插入，驗證最近生成的地圖點並進行篩選，然後產生新的地圖點，使用局部捆集調整（Local BA），最後再對插入的key frame進行篩選，刪除多餘的key frame。
 
--	Loop Closing 
+- Loop Closing 
 這主要分為兩個Process，分別是閉環探測和閉環校正。閉環檢測先使用WOB進行探測，然後Sim3演算法計算相似變換。閉環校正，主要是閉環融合和Essential Graph的圖片優化。
 
 SLAM是軟體機器人，可自動同步執行在map上建立object，而object在map具有合體視覺效果。Visual SLAM須透過攝影裝置進行SLAM。
@@ -49,7 +49,7 @@ ORB-SLAM2有以下特點
 
 
 # Result
-因製作視覺效果考量下，我們以旋轉攝影與坐姿動作自攝影片。
+因製作視覺效果考量下，以旋轉攝影與坐姿動作自攝影片。
 
 ## Take videos by myselves 
 
@@ -61,30 +61,66 @@ ORB-SLAM2有以下特點
 
 [![](http://img.youtube.com/vi/xSsBWGHv6ls/0.jpg)](http://www.youtube.com/watch?v=xSsBWGHv6ls "")
 
+## Make these visual effects with ORB-SLAM2 
+本組已依助教提供github的ORB-SLAM2，逐步安裝完成，但是無法啟動。安裝過程極為耗時，且不容易，因此放棄。觀看github與作者論文解釋，應必須將影片切割數個frame，再放入dataset中，可以對背景作track points，然後將Text、2D、3D等Object置入track points，讓它產生match moving technique效果。
 
-## Generate the Simultaneous localization and mapping of 3D visual effects
 
-在第一組實驗中，首先取得feature與Trajectory，插入2D image與3D model，在Rotating與zooming in or out微調下，產生match moving technique視覺效果
+## Make these visual effects with any post-production software
+
+AE軟體有Track camerae，可以深度分析背景。
+
+![](https://i.imgur.com/p8SUH3t.jpg)
+
+深度分析背景完成，會產生track points，可以插入text、2D、3D等Object。
+
+![](https://i.imgur.com/LMKSxfJ.jpg)
+
+
+
+在第一組實驗中，首先先用AE的track camera對背景深度分析出match moving technique，插入2D image，在Rotating與zooming in-out微調下，產生match moving technique視覺效果。
+
+- Before
 
 [![](http://img.youtube.com/vi/xC0J4mSv2Ug/0.jpg)](http://www.youtube.com/watch?v=xC0J4mSv2Ug "")
 
-在第二組實驗中，首先取得feature與Trajectory，插入3D model，用Rotating與zooming in or out微調下，產生match moving technique視覺效果。
+- After
+
+[![](http://img.youtube.com/vi/E4_fyy0wZYs/0.jpg)](http://www.youtube.com/watch?v=E4_fyy0wZYs "")  
+
+
+## Compare above methods
+進行實驗後與觀察，對ORB_SLAM2與AE後製軟體比較結果，AE在軟體安裝與軟體操作是優於ORB_SLAM2。
+
+| |AE|ORB_SLAM2|
+|-|-|-|
+|軟體安裝|優|劣|
+|軟體操作|優|劣|
+
+在Track部份，在影片晃動是Track優於No Track，其它兩項均無影響。
+
+| |Track|No Track|
+|-|-|-|
+|影片晃動影響|優|劣|
+|旋轉|優|劣|
+|放大縮小|優|劣|
+
+## Bonus- Make visual effects with other SLAM methods.
+
+在第二組實驗中，3D model的light ball插入影片背景中，用Rotating與zooming in or out微調下，產生match moving technique視覺效果。
 
 [![](http://img.youtube.com/vi/Wy0xvm-Zk7U/0.jpg)](http://www.youtube.com/watch?v=Wy0xvm-Zk7U "")
 
-## Compare above methods
- 在實驗一與實驗二比較後，取得feature與Trajectory，讓Virtual object貼近真實object有最AR與MR視覺效果。
-
 
 # Conclusion
--	在實驗一與實驗二比較後，Virtual object貼近真實object有最AR與MR視覺效果。
-- 在實驗一中，使用Rotating與zooming in or out，可以產生最佳的Augmented reality與Mixed reality。
-- 在實驗二中，Multi-layer的3D image經由alignment，配合blur、zoom out-in等技術製成3D model插入真實視景，Energy ball產生Stop motion與Motion parallax效果。
+- 在實驗一中，使用track points, 將object磁吸於背景，可以產生最佳的Augmented reality與Mixed reality。
+- 在實驗二中，Multi-layer的3D image經由alignment，配合blur、zoom out-in等技術製成3D model插入真實視景，light ball產生Stop motion與Motion parallax效果。
 
 # Reference
 -	 [1] [Monocular] Raúl Mur-Artal, J. M. M. Montiel and Juan D. Tardós. ORB-SLAM: A Versatile and Accurate Monocular SLAM System. IEEE Transactions on Robotics, vol. 31, no. 5, pp. 1147-1163, 2015. (2015 IEEE Transactions on Robotics Best Paper Award).
 
 -	[2]Tardós. ORB-SLAM2: an Open-Source SLAM System for Monocular, Stereo and RGB-D Cameras. IEEE Transactions on Robotics, vol. 33, no. 5, pp. 1255-1262, 2017.
+
+
 
 
 
