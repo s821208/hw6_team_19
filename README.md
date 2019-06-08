@@ -4,7 +4,7 @@ ISA525700 Computer Vision for Visual Effects<br/>Assignment 6: Match Moving SLAM
 
 
 # Abstract
-本研究探討ORB-SLAM 2(Simultaneous localization and mapping)方法，經由Tracking、Mapping、Relocalization、Loop closing，產生相似於AR或MR影片的視覺效果，，輔以後製軟體輸出成果進行視覺效果比較。
+本研究探討ORB-SLAM 2(Simultaneous localization and mapping)方法，經由Tracking、Mapping、Relocalization、Loop closing，產生相似於AR或MR影片的視覺效果，輔以後製軟體輸出成果進行視覺效果比較。
 
 Keyword: ORB-SLAM2, Tracking, Mapping, Relocalization, Loop closing
 
