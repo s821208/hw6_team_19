@@ -61,6 +61,9 @@ ORB-SLAM2有以下特點
 
 [![](http://img.youtube.com/vi/xSsBWGHv6ls/0.jpg)](http://www.youtube.com/watch?v=xSsBWGHv6ls "")
 
+## Make these visual effects with ORB-SLAM2 
+依助教作業說明github的ORB-SLAM2，逐步安裝完成，安裝過程與操作極為耗時，應須將影片切割數個frame，再放入dataset中，可以對背景作track points與製作影片，然後將Text、2D、3D等Object置入影片或影片中track points，讓它產生AR與MR效果。
+
 ## Make these visual effects with any post-production software
 
 AE軟體有Track camerae，可以深度分析背景。
@@ -71,9 +74,7 @@ AE軟體有Track camerae，可以深度分析背景。
 
 ![](https://i.imgur.com/LMKSxfJ.jpg)
 
-
-
-在第一組實驗中，首先先用AE的track camera對背景深度分析出match moving technique，插入2D image，在Rotating與zooming in-out微調下，產生match moving technique視覺效果。
+在第一組實驗中，首先先用AE的track camera對背景深度分析出match moving technique，插入2D image，在Rotating與zooming in-out微調下，產生match moving technique與MR視覺效果。
 
 - Before
 
@@ -103,17 +104,17 @@ AE軟體有Track camerae，可以深度分析背景。
 ## Make some special effects and Insert a 3D model
 
 - Make some special effects based on the pose information, such as rotating, zooming in or out 
-
 - Insert a 3D model to your video
+- Bonus- Make visual effects with other SLAM methods.
 
-在第二組實驗中，3D model的light ball插入影片背景中，用Rotating與zooming in or out微調下，產生match moving technique視覺效果。
+在第二組實驗中，基於pose information，3D model的light ball插入影片背景中，再配合Rotating與zooming in or out微調下，產生AR與MR結合的視覺效果。
 
 [![](http://img.youtube.com/vi/Wy0xvm-Zk7U/0.jpg)](http://www.youtube.com/watch?v=Wy0xvm-Zk7U "")
 
 
 # Conclusion
-- 在實驗一中，使用track points, 將object磁吸於背景，可以產生最佳的Augmented reality與Mixed reality。
-- 在實驗二中，Multi-layer的3D image經由alignment，配合blur、zoom out-in等技術製成3D model插入真實視景，light ball產生Stop motion與Motion parallax效果。
+- 在實驗一中，使用track points, 將object磁吸於背景，可以產生最佳的Mixed reality；若不使用track points, 將object置入影片，可以產生最佳的Augmented realityy。
+- 在實驗二中，Multi-layer的3D Model經由alignment，配合blur、zoom out-in等技術插入真實影片中，light ball除了產生AR與MR效果外，也具有Stop motion與Motion parallax效果。
 
 # Reference
 -	 [1] [Monocular] Raúl Mur-Artal, J. M. M. Montiel and Juan D. Tardós. ORB-SLAM: A Versatile and Accurate Monocular SLAM System. IEEE Transactions on Robotics, vol. 31, no. 5, pp. 1147-1163, 2015. (2015 IEEE Transactions on Robotics Best Paper Award).
