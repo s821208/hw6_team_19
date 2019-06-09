@@ -100,7 +100,11 @@ AE軟體有Track camerae，可以深度分析背景。
 |旋轉|優|劣|
 |放大縮小|優|劣|
 
-## Bonus- Make visual effects with other SLAM methods.
+## Make some special effects and Insert a 3D model
+
+- Make some special effects based on the pose information, such as rotating, zooming in or out 
+
+- Insert a 3D model to your video
 
 在第二組實驗中，3D model的light ball插入影片背景中，用Rotating與zooming in or out微調下，產生match moving technique視覺效果。
 
