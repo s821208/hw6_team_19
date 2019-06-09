@@ -61,10 +61,6 @@ ORB-SLAM2有以下特點
 
 [![](http://img.youtube.com/vi/xSsBWGHv6ls/0.jpg)](http://www.youtube.com/watch?v=xSsBWGHv6ls "")
 
-## Make these visual effects with ORB-SLAM2 
-本組已依助教提供github的ORB-SLAM2，逐步安裝完成，但是無法啟動。安裝過程極為耗時，且不容易，因此放棄。觀看github與作者論文解釋，應必須將影片切割數個frame，再放入dataset中，可以對背景作track points，然後將Text、2D、3D等Object置入track points，讓它產生match moving technique效果。
-
-
 ## Make these visual effects with any post-production software
 
 AE軟體有Track camerae，可以深度分析背景。
